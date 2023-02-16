@@ -9,14 +9,13 @@ using System.Threading.Tasks;
 
 namespace SeleniumUITest.Pages
 {
-    public class HomePage : BaseClass
+    public class HomePage 
 
     {
-     
         
         // Instance of Webdriver
 
-        public static new IWebDriver driver;
+        public static IWebDriver driver;
                 // Create a constructor
 
         public HomePage(IWebDriver  driver) {
@@ -31,23 +30,22 @@ namespace SeleniumUITest.Pages
         /* Page Objects  - for webelements
          */
 
-        public  readonly By registerlink = By.ClassName("ico-register");
+        private  readonly By registerlink = By.ClassName("ico-register");
         public  readonly By loginlink = By.ClassName("ico-login");
 
-        // Name of the web Elements
+        public readonly string registernm = "Register link";
+        public readonly string loginnm = "Login link";
 
-        private static string registerlinknm = "Register Link";
-        private static string loginlinknm = "Login link";
         /// page Methods
         /// 
         public void ClickRegisterLink()
         {
-            driver.Click(registerlink, registerlinknm);
+            driver.Click(registerlink, registernm);
         }
 
         public void ClickLoginLink()
         {
-            driver.Click(loginlink, loginlinknm);
+            driver.Click(loginlink, loginnm);
         }
 
     }

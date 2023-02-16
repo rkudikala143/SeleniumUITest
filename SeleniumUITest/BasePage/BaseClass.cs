@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Configuration;
+using System.ComponentModel.Composition.Primitives;
 
 namespace SeleniumUITest.BasePage
 {
@@ -18,10 +19,10 @@ namespace SeleniumUITest.BasePage
     public class BaseClass
     {
         public static IWebDriver driver;
-        [TestInitialize]
+         [TestInitialize]
         public void Init()
         {
-            string siteurl = ConfigurationManager.AppSettings["Url"];
+                      string siteurl = ConfigurationManager.AppSettings["Url"];
 
                 // Create an Instance for WebDriver
                 driver = new ChromeDriver();
@@ -35,7 +36,8 @@ namespace SeleniumUITest.BasePage
         [TestCleanup]
         public void Cleanup()
         {
-            driver.Close();
+               driver.Close();
+            driver.Quit();
         }
     }
 }

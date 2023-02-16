@@ -20,13 +20,12 @@ namespace SeleniumUITest.Pages
             LoginPage.driver= driver;
         }
 
+        //* page objects
 
         public string getTitle()
         {
             return driver.Title;
         }
-
-        //* page objects
         public static readonly By emailtxt = By.Id("Email");
         public static readonly By passwordtxt = By.Id("Password");
         public static readonly By loginbtn = By.CssSelector("input.button-1.login-button");

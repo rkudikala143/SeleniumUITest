@@ -1,29 +1,33 @@
-﻿using AventStack.ExtentReports.MarkupUtils;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
+﻿using AventStack.ExtentReports.Model;
+using NUnit.Framework;
+using OpenQA.Selenium.DevTools.V107.Debugger;
 using SeleniumUITest.BasePage;
 using SeleniumUITest.Pages;
 using SeleniumUITest.WebDriverExtensions;
 using System;
+using System.Configuration;
+using Assert = NUnit.Framework.Assert;
 
 namespace SeleniumUITest.Tests
 {
-    [TestClass]
+  
     public class RegisterTest  : BaseClass
     {
-        String email = "rikala33@yahoo.com";
+        String email = "rikala309933@yahoo.com";
         public HomePage homePage;
         public RegisterPage registerPage;
 
-        [TestCategory("Smoke")]
-        [TestMethod]
+       
+        [Test]
     
         public void VerifyRegisterFucntionalityWithValidData()
         {
       
             homePage = new HomePage(driver);
             registerPage = new RegisterPage(driver);
-                   //Assert.AreEqual(homePage.getTitle(), "Demo Web Shop");
-
+            
+            //Assert.AreEqual(homePage.getTitle(), "Demo Web Shop");
+         
             homePage.ClickRegisterLink();
 
             //Assert.AreEqual(registerPage.getTitle(), "Demo Web Shop. Register");
@@ -49,8 +53,11 @@ namespace SeleniumUITest.Tests
             //Assert.IsTrue(isTrue);
          
             registerPage.clickLogout();
-     
+            WebDriverExtension.extent.Flush();
+            driver.Close();
+            driver.Quit();
         }
-              
+
+      
     }
 }

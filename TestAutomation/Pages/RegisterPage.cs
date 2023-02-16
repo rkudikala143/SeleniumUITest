@@ -14,7 +14,6 @@ namespace SeleniumUITest.Pages
     {
         // WebDriver instance
         public static IWebDriver driver;
-
         // Constructor
         public RegisterPage(IWebDriver driver) {
             RegisterPage.driver = driver;
