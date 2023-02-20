@@ -13,4 +13,9 @@ namespace SeleniumUITest.DataModel
         public string Email { get; set; }
         public string Password { get; set; }
     }
+    public class RegisterList
+    {
+        private List<RegisterDataModel> register;
+        public List<RegisterDataModel> Register { get =>register; set => register = value; }
+    }
 }

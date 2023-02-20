@@ -1,0 +1,28 @@
+{
+  "Register": [
+    {
+      "FirstName": "Ramesh",
+      "LastName": "kudikala",
+      "Email": "Testautomation123@yahoo.com",
+      "Password": "Testing123"
+    },
+    {
+      "FirstName": "Stephen",
+      "LastName": "Rob",
+      "Email": "StephenRob@yahoo.com",
+      "Password": "Testing123"
+    },
+    {
+      "FirstName": "Jhon",
+      "LastName": "Wesley",
+      "Email": "Jhon14333@yahoo.com",
+      "Password": "Testing123"
+    },
+    {
+      "FirstName": "kumar",
+      "LastName": "Kankara",
+      "Email": "Kumary98789@gmail.com",
+      "Password": "Testing123"
+    }
+  ]
+}
