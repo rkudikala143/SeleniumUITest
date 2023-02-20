@@ -46,7 +46,7 @@ namespace SeleniumUITest
                 // Enter email
                 driver.FindElement(By.Id("Email")).SendKeys(email);
                 // Enter Password
-                driver.FindElement(By.Name("Password")).SendKeys("Password");
+                driver.FindElement(By.Id("Password")).SendKeys("Password");
                 // Enter confirm Password
                 driver.FindElement(By.Id("ConfirmPassword")).SendKeys("Password");
                 // Click on Register button

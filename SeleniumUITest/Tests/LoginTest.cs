@@ -1,9 +1,11 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
 using NUnit.Framework;
+using NUnit.Framework.Interfaces;
 using SeleniumUITest.BasePage;
 using SeleniumUITest.Pages;
 using System;
 using System.Configuration;
+using System.Xml.Linq;
 
 namespace SeleniumUITest.Tests
 {
@@ -12,7 +14,7 @@ namespace SeleniumUITest.Tests
     {
         HomePage homePage;
         LoginPage loginPage;
-        [TestCategory("Smoke")]
+        [TestCategory("Smoke")]      
         [TestMethod]
          public void VerifyLoginFunctionalityWithValidData()
         {
